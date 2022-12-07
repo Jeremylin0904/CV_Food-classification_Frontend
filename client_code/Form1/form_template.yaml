@@ -1,0 +1,155 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: center
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: ''
+      visible: true
+      text: Upload image
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: ''
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_1
+    layout_properties: {grid_position: 'WGMSXR,UGRZRF'}
+    event_bindings: {change: file_loader_1_change}
+  - type: Image
+    properties: {}
+    name: image_1
+    layout_properties: {grid_position: 'MILSAL,HVZHOJ'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Classify, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: classify
+    layout_properties: {grid_position: 'OLMXDI,PVRGLW'}
+    event_bindings: {click: classify_click}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: KFQLAT, title: Category, data_key: cat}
+      - {id: CAXGDX, title: Probability, data_key: prob}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 6
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'FGVXRX,QKFYJB'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Form1.RowTemplate1}
+      name: repeating_panel_1
+      layout_properties: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'If the top5 possible food categories do not match the
+        result, please choose the correct category to help us adjust our model. Thank
+        you!', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'JTLTNJ,WMZPKB'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [bawan, beef_noodles, beef_soup, bitter_melon_with_salted_eggs, braised_napa_cabbage,
+        braised_pork_over_rice, brown_sugar_cake, bubble_tea, caozaiguo, chicken_mushroom_soup,
+        chinese_pickled_cucumber, coffin_toast, cold_noodles, crab_migao, deep-fried_chicken_cutlets,
+        deep_fried_pork_rib_and_radish_soup, dried_shredded_squid, egg_pancake_roll,
+        eight_treasure_shaved_ice, fish_head_casserole, fried-spanish_mackerel_thick_soup,
+        fried_eel_noodles, fried_instant_noodles, fried_rice_noodles, ginger_duck_stew,
+        grilled_corn, grilled_taiwanese_sausage, hakka_stir-fried, hot_sour_soup,
+        hung_rui_chen_sandwich, intestine_and_oyster_vermicelli, iron_egg, jelly_of_gravey_and_chicken_feet_skin,
+        jerky, kung-pao_chicken, luwei, mango_shaved_ice, meat_dumpling_in_chili_oil,
+        milkfish_belly_congee, mochi, mung_bean_smoothie_milk, mutton_fried_noodles,
+        mutton_hot_pot, nabeyaki_egg_noodles, night_market_steak, nougat, oyster_fritter,
+        oyster_omelet, papaya_milk, peanut_brittle, pepper_pork_bun, pig_s_blood_soup,
+        pineapple_cake, pork_intestines_fire_pot, potsticker, preserved_egg_tofu,
+        rice_dumpling, rice_noodles_with_squid, rice_with_soy-stewed_pork, roasted_sweet_potato,
+        sailfish_stick, salty_fried_chicken_nuggets, sanxia_golden_croissants, saute_spring_onion_with_beef,
+        scallion_pancake, scrambled_eggs_with_shrimp, scrambled_eggs_with_tomatoes,
+        seafood_congee, sesame_oil_chicken_soup, shrimp_rice, sishen_soup, sliced_pork_bun,
+        spicy_duck_blood, steam-fried_bun, steamed_cod_fish_with_crispy_bean, steamed_taro_cake,
+        stewed_pig_s_knuckles, stinky_tofu, stir-fried_calamari_broth, stir-fried_duck_meat_broth,
+        stir-fried_loofah_with_clam, stir-fried_pork_intestine_with_ginger, stir_fried_clams_with_basil,
+        sugar_coated_sweet_potato, sun_cake, sweet_and_sour_pork_ribs, sweet_potato_ball,
+        taiwanese_burrito, taiwanese_pork_ball_soup, taiwanese_sausage_in_rice_bun,
+        tanghulu, tangyuan, taro_ball, three-cup_chicken, tube-shaped_migao, turkey_rice,
+        turnip_cake, twist_roll, wheel_pie, xiaolongbao, yolk_pastry, '']
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: false
+    name: drop_down_1
+    layout_properties: {grid_position: 'BJDXBL,KCBGKU'}
+    event_bindings: {change: drop_down_1_change}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: tune, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'WULIRF,PSULDL'}
+    event_bindings: {click: button_1_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Thanks for making the model better!, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'SVGKDO,UXWUKC'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Taiwanese Food Classification, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: false, underline: false, icon: ''}
+  name: headline_1
+  layout_properties: {slot: title}
