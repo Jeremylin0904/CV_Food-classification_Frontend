@@ -1,5 +1,8 @@
 dependencies: []
-services: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
 package_name: food_classification
 allow_embedding: false
 name: Clone of food classification
