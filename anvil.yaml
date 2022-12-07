@@ -5,7 +5,7 @@ services:
   server_config: {}
 package_name: food_classification
 allow_embedding: false
-name: Clone of food classification
+name: Food classification
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {}
