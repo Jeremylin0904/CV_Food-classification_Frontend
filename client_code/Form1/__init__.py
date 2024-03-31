@@ -26,11 +26,11 @@ class Form1(Form1Template):
       self.data_grid_1.visible = True
       self.repeating_panel_1.visible = True
       self.repeating_panel_1.items = [
-        {"cat": food_category[0][1], "prob": food_category[0][0]},
-        {"cat": food_category[1][1], "prob": food_category[1][0]},
-        {"cat": food_category[2][1], "prob": food_category[2][0]},
-        {"cat": food_category[3][1], "prob": food_category[3][0]},
-        {"cat": food_category[4][1], "prob": food_category[4][0]}
+        {"cat": food_category[0][1], "prob": round(food_category[0][0],3)},
+        {"cat": food_category[1][1], "prob": round(food_category[1][0],3)},
+        {"cat": food_category[2][1], "prob": round(food_category[2][0],3)},
+        {"cat": food_category[3][1], "prob": round(food_category[3][0],3)},
+        {"cat": food_category[4][1], "prob": round(food_category[4][0],3)}
       ]
       self.label_2.visible = True
       self.drop_down_1.visible = True
