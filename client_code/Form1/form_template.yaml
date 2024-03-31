@@ -53,7 +53,7 @@ components:
       role: null
       columns:
       - {id: KFQLAT, title: Category, data_key: cat}
-      - {id: CAXGDX, title: Probability, data_key: prob}
+      - {id: CAXGDX, title: Score, data_key: prob}
       auto_header: true
       tooltip: ''
       border: ''
